@@ -9,16 +9,18 @@ public class SimpleCalc implements Runnable {
         this.elems = elems;
     }
 
-    private int multiplyBy3(int value) {
-        sum = value * 3;
+    private int multiplyBy3(int[] elems) {
+        int value;
+        for(int i = 0; i < elems.length; i++) {
+            value = elems[i]*3;
+            sum += value;
+        }
         return sum;
     }
 
     @Override
     public void run() {
-        for(int i = 0; i < elems.length; i++) {
-            multiplyBy3(elems[i]);
-        }
+        multiplyBy3(elems);
     }
 
     public int getSum() {
