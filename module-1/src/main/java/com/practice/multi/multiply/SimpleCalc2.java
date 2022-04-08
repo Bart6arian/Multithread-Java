@@ -33,6 +33,6 @@ public class SimpleCalc2 implements Runnable {
     @Override
     public void run() {
         executeMath();
-        getScores();
+        System.out.println(Arrays.toString(getScores()));
     }
 }
