@@ -1,2 +1,5 @@
-package com.practice.multi.deadlock;public class ResourceA {
+package com.practice.multi.deadlock;
+
+public class ResourceA {
+
 }
