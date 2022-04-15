@@ -3,10 +3,10 @@ package com.pracitce.multi.exchanger;
 import java.util.Random;
 import java.util.concurrent.Exchanger;
 
-public class Book implements Runnable {
+public class BookExchanger implements Runnable {
     private Exchanger<String> exchanger;
 
-    public Book(Exchanger<String> exchanger) {
+    public BookExchanger(Exchanger<String> exchanger) {
         this.exchanger = exchanger;
         new Thread(this).start();
     }
