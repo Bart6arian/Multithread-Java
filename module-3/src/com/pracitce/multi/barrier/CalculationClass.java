@@ -8,10 +8,10 @@ public class CalculationClass implements Runnable {
     private int sumA = 1000;
     private int sumB = 0;
 
-    private final CyclicBarrier barrier;
+    private final PartialStep partialStep;
 
-    public CalculationClass(CyclicBarrier barrier) {
-        this.barrier = barrier;
+    public CalculationClass(PartialStep partialStep) {
+        this.partialStep = partialStep;
         new Thread(this).start();
     }
 
